@@ -1,0 +1,38 @@
+.fond{
+  background-color: blue; /* fond d'ecran */
+  height: 100vh; /* hauteur du bleu */
+  width: 100vw; /* largeur du bleu */
+}
+
+.sol{
+  background-image: url(mur.png); /* photo mur */
+  background-size: 50px;  /* taille de l'image pour le mur */
+  width: 100%;  /* largeur du sol*/
+  height: 100px;  /* hauteur du sol */
+  position: fixed;  /* fixe le mur et le met en avant */
+  bottom: 0px;  /* bas : le met en bas */
+}
+
+.mario{
+  background-image: url(mario.png); /* photo mario */
+  background-size: 50px; /* taille de l'image pour mario */
+  width: 50px;  /* largeur de mario */
+  height: 65px; /* hauteur de mario */
+  position: fixed; /* fixe mario et le met en avant */
+  bottom: 100px;  /* bas : le met en bas */
+  background-repeat: no-repeat; /* enleve la repetition de l'image */
+  animation-name: animation-mario; /* fait appel a "animation-mario" */
+  animation-duration: 5s; /* duré de l'annimation */
+  animation-iteration-count: infinite;  /* continu l'annimation infiniment */
+  animation-timing-function: linear;  /* fait l'annimation sans effet de ralentissement a la fin */
+}
+
+@keyframes animation-mario /* defini un scenario */
+{
+  0% {
+    transform: translateX(0px); /* annime l'image en vertiale */
+  }
+  100% {
+    transform: translateX(100vw); /* annime l'image en orizontal */
+  }
+}
